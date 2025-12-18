@@ -163,12 +163,12 @@ while (window.isOpen()) {
     // Event handling
     sf::Event event;
     while (window.pollEvent(event)) {
-        if (event.type == sf::Event:: Closed)
+        if (event.type == sf::Event::Closed)
             window.close();
     }
     
     // Update
-    // ...  game logic ...
+    // ... game logic ...
     
     // Render
     window.clear(sf::Color::Black);
@@ -194,7 +194,7 @@ sf::Vector2f b(1.f, 2.f);
 
 // Addition/Subtraction
 sf::Vector2f sum = a + b;
-sf:: Vector2f diff = a - b;
+sf::Vector2f diff = a - b;
 
 // Scalar multiplication
 sf::Vector2f scaled = a * 2.f;
@@ -247,7 +247,7 @@ void applyForce(const sf::Vector2f& force) {
 // Common forces
 sf::Vector2f gravity(0.f, 9.8f * pixelsPerMeter);
 sf::Vector2f drag = -velocity * dragCoefficient;
-sf::Vector2f friction = -velocity. normalized() * frictionCoefficient;
+sf::Vector2f friction = -velocity.normalized() * frictionCoefficient;
 ```
 
 ### Collision Detection Cheat Sheet
@@ -268,7 +268,7 @@ bool aabbCollision(sf::FloatRect rect1, sf::FloatRect rect2) {
 
 // Point-Circle Collision
 bool pointInCircle(sf::Vector2f point, sf::Vector2f center, float radius) {
-    float dx = point.x - center. x;
+    float dx = point.x - center.x;
     float dy = point.y - center.y;
     return (dx * dx + dy * dy) < (radius * radius);
 }
@@ -297,7 +297,7 @@ switch (currentState) {
     case GameState::Playing:
         // Handle gameplay
         break;
-    // ... 
+    // ...
 }
 
 // Object Pool Pattern
@@ -305,7 +305,7 @@ std::vector<Bullet> bulletPool(100);
 int nextBullet = 0;
 
 void spawnBullet(sf::Vector2f pos, sf::Vector2f vel) {
-    bulletPool[nextBullet]. reset(pos, vel);
+    bulletPool[nextBullet].reset(pos, vel);
     nextBullet = (nextBullet + 1) % bulletPool.size();
 }
 ```

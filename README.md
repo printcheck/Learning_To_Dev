@@ -1,2 +1,2 @@
 # Leaning-C-
-Diffrent resources and cheatsheets for c++. there added i  need them on my coding journay
+Different resources and cheatsheets for C++. These are added as I need them on my coding journey.
