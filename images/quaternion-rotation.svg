@@ -1,0 +1,59 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="250" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">
+    Quaternion Rotation
+  </text>
+  
+  <!-- Coordinate system -->
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#ddd" stroke-width="1"/>
+  <line x1="250" y1="50" x2="250" y2="350" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Original vector (blue) -->
+  <line x1="250" y1="200" x2="350" y2="200" stroke="#3498db" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="360" y="195" font-size="14" fill="#3498db">v (original)</text>
+  
+  <!-- Rotation axis (red) -->
+  <circle cx="250" cy="200" r="5" fill="#e74c3c"/>
+  <line x1="250" y1="200" x2="250" y2="120" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="255" y="110" font-size="14" fill="#e74c3c">axis</text>
+  
+  <!-- Rotated vector (green) -->
+  <line x1="250" y1="200" x2="320" y2="130" stroke="#2ecc71" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <text x="330" y="125" font-size="14" fill="#2ecc71">v' (rotated)</text>
+  
+  <!-- Rotation arc -->
+  <path d="M 350 200 A 100 100 0 0 0 320 130" stroke="#f39c12" stroke-width="2" fill="none"/>
+  <text x="340" y="165" font-size="14" fill="#f39c12">θ</text>
+  
+  <!-- Labels -->
+  <text x="460" y="205" font-size="12" fill="#999">x</text>
+  <text x="255" y="40" font-size="12" fill="#999">z</text>
+  
+  <!-- Formula box -->
+  <rect x="20" y="260" width="460" height="120" fill="#f8f9fa" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="250" y="285" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+    Quaternion Rotation Formula
+  </text>
+  <text x="30" y="310" font-size="12" fill="#555">
+    q = [cos(θ/2), sin(θ/2) * axis]
+  </text>
+  <text x="30" y="330" font-size="12" fill="#555">
+    v' = q * v * q⁻¹
+  </text>
+  <text x="30" y="355" font-size="11" fill="#777">
+    where θ is rotation angle and axis is normalized rotation axis
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3498db"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2ecc71"/>
+    </marker>
+  </defs>
+</svg>

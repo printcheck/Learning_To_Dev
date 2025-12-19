@@ -104,7 +104,7 @@
 - Trigonometry (sin, cos, atan2)
 - Linear Interpolation (lerp)
 - Dot & Cross Products
-- Quaternions (for 3D rotation)
+- **Quaternions (for 3D rotation)** - [See dedicated section](./cpp-math-resources.md#quaternions-for-3d-rotation) 🔄
 
 ### Learning Resources
 - [3Blue1Brown - Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) ⭐ Visual explanations
